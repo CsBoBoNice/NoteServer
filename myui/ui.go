@@ -1,4 +1,4 @@
-package main
+package myui
 
 import (
 	"fmt"
@@ -41,7 +41,11 @@ func (job *Jobs) Clear() {
 }
 
 func main() {
+	Input()
+	fmt.Printf("nice day~\n")
+}
 
+func Input() {
 	var job Jobs
 	fmt.Printf("请输入:\n")
 	for {
@@ -69,8 +73,6 @@ func main() {
 
 		}
 	}
-
-	fmt.Printf("nice day~\n")
 }
 
 func Shell(sh string, arg string) {
