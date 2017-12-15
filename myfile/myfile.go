@@ -65,7 +65,6 @@ func CheckFile(e error) {
 //得到文件的字节大小
 //返回文件字节大小
 func GetFileSize(fd *os.File) (size int64) {
-
 	this, err := fd.Seek(0, 1) //保存当前位置
 	CheckFile(err)
 	_, err = fd.Seek(0, 0) //指向文件头
@@ -74,7 +73,6 @@ func GetFileSize(fd *os.File) (size int64) {
 	CheckFile(err)
 	_, err = fd.Seek(this, 0) //回到原来文件指向位置
 	CheckFile(err)
-
 	return
 }
 
